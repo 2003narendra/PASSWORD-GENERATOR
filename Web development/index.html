@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Strength</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="buttons">
+        <button disabled>Password Strength</button>
+        <a href="passwordGenarator.html"><button>Password Generator</button></a>
+        
+      </div>
+    <h1>Password Strength Calculator</h1>
+    <div class="strength-meter" id="strength-meter"></div>
+    <input class="password-input" id="password-input" type="text" autofocus  aria-laballedby="Password" placeholder="Enter Password"> 
+    <input type="checkbox" onclick="passwordDisplayHandler()" checked>Show Password
+    <div class="problems" id="problems">
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+	VanillaTilt.init(document.querySelectorAll(".problems"), 
+    {
+		max: 25,
+		speed: 400
+	});</script>
+</body>
+</html>
